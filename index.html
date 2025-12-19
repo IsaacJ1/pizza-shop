@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pizza Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Pizza Shop</h1>
+    <nav>
+      <button id="cartBtn">Cart (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Hot, Fresh & Delicious</h2>
+        <p>Build your pizza or choose from our best-sellers.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4b5e3c2f1c7bd7779a1a0e9f3f7d4f2b" alt="Pizza" class="hero-img">
+    </section>
+
+    <section class="menu">
+      <h3>Menu</h3>
+      <div id="menuItems" class="menu-grid"></div>
+    </section>
+  </main>
+
+  <aside id="cart" class="cart hidden">
+    <h4>Your Order</h4>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div>Total: $<span id="cartTotal">0.00</span></div>
+      <button id="checkoutBtn" class="primary">Checkout</button>
+    </div>
+  </aside>
+
+  <div id="checkoutModal" class="modal hidden">
+    <div class="modal-content">
+      <h4>Checkout</h4>
+      <form id="orderForm">
+        <label>Name <input name="name" required></label>
+        <label>Phone <input name="phone" required></label>
+        <label>Address <input name="address" required></label>
+        <div class="modal-actions">
+          <button type="submit" class="primary">Place Order</button>
+          <button type="button" id="cancelCheckout">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
